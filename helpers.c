@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 10:35:24 by hakader           #+#    #+#             */
-/*   Updated: 2025/01/16 14:31:02 by hakader          ###   ########.fr       */
+/*   Updated: 2025/01/16 15:28:43 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,25 @@ size_t	ft_strlen(const char *str)
 	return (len);
 }
 
-int	ft_isnum(char *av)
+int	ft_isnum(char **av)
 {
 	int	i;
+	int	j;
 
 	i = 0;
-	if (!av)
-		return (0);
-	while (av[i])
+	j = 0;
+	// if (!av)
+	// 	return (0);
+	while (av[j])
 	{
-		if (!(av[i] >= '0' && av[i] <= '9'))
-			return (0);
-		i++;
+		i = 0;
+		while (av[j][i])
+		{
+			if (!(av[j][i] >= '0' && av[j][i] <= '9'))
+				return (0);
+			i++;
+		}
+		j++;
 	}
 	return (1);
 }

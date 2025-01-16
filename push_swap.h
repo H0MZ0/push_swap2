@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 10:19:08 by hakader           #+#    #+#             */
-/*   Updated: 2025/01/16 14:31:08 by hakader          ###   ########.fr       */
+/*   Updated: 2025/01/16 15:27:43 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ typedef struct list
 } t_list;
 
 
-char	*ft_strjoin(char *s1, char *s2);
+char    *ft_strjoin(char *s1, char *s2);
 char	**ft_split(char const *s, char c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 size_t	ft_strlen(const char *str);
-int	ft_isnum(char *av);
+int     ft_isnum(char **av);
 
 
 
