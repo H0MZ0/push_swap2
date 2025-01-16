@@ -6,13 +6,14 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 16:14:07 by hakader           #+#    #+#             */
-/*   Updated: 2025/01/16 17:11:52 by hakader          ###   ########.fr       */
+/*   Updated: 2025/01/16 18:38:04 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.c"
+#include <stdio.h>
+#include <string.h>
 
-void	ft_swap_strs(char *dest, char *src)
+void	ft_swap_strs(char **dest, char **src)
 {
 	char	*tmp;
 
@@ -23,26 +24,31 @@ void	ft_swap_strs(char *dest, char *src)
 
 void	ft_bubble(char **strs)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 
 	i = 0;
 	j = 1;
-	while (strs[i] || strs[j])
+	while (strs[i])
 	{
-		if (strs[i] > strs[j])
+		while (strs[j])
 		{
-			ft_swap_strs(strs[i], strs[j]);
-			i++;
+			if (strcmp(strs[i], strs[j]) < 0)
+				ft_swap_strs (strs[i], strs[j]);
+			j++;
 		}
-		j++;
+		i++;
+		j = i + 1;
+		if (strs[j] == NULL)
+			break;
 	}
 }
-
-// int main()
-// {
-// 	char dest[5] = "hello";
-// 	char src[5] = "world";
-// 	ft_swap_strs(dest, src);
-// 	printf (dest, src);
-// }
+int main()
+{
+	char *src;
+	char *dest;
+	src = "hello";
+	dest = "world";
+	ft_swap_strs(&dest, &src);
+	printf ("%s\n%s",dest, src);
+}
