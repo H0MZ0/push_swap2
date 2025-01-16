@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 10:37:30 by hakader           #+#    #+#             */
-/*   Updated: 2025/01/16 11:08:39 by hakader          ###   ########.fr       */
+/*   Updated: 2025/01/16 14:30:54 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,19 @@ int main (int ac, char **av)
 	stack_a = NULL;
 	int i = 0;
 
+	// if (av)
+	// 	printf("Error");
 	arr = join_args(av);
 	av = ft_split(arr, ' ');
-	
+	if(ft_isnum(*av) == 0)
+	{
+		printf("Error");
+		return (0);
+	}
 	while (av[i])
 	{
 		printf("%s\n", av[i]);
 		i++;
 	}
-	
+	return (0);
 }
