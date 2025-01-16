@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 16:14:07 by hakader           #+#    #+#             */
-/*   Updated: 2025/01/16 18:38:04 by hakader          ###   ########.fr       */
+/*   Updated: 2025/01/16 18:48:48 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,16 @@ void	ft_swap_strs(char **dest, char **src)
 	tmp = *src;
 	*src = *dest;
 	*dest = tmp;
+}
+
+int	*ft_strcmp(char *src, char *dest)
+{
+
+	if (!src || !dest)
+		return (0);
+	if (src == dest)
+		return(0);
+	return (src - dest);
 }
 
 void	ft_bubble(char **strs)
