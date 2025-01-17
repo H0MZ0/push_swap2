@@ -6,11 +6,28 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 10:37:30 by hakader           #+#    #+#             */
-/*   Updated: 2025/01/17 21:37:34 by hakader          ###   ########.fr       */
+/*   Updated: 2025/01/17 22:01:08 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+
+void	ft_repeat(char **strs)
+{
+	int	i;
+
+	i = 0;
+	while (strs[i])
+	{
+		if (strs[i] == strs[i + 1])
+		{
+			write (1, "Error\n", 6);
+			exit(1);
+		}
+		i++;
+	}
+}
 
 char	*join_args(char **av)
 {

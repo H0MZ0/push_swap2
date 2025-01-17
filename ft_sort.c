@@ -6,30 +6,12 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 16:14:07 by hakader           #+#    #+#             */
-/*   Updated: 2025/01/17 21:30:09 by hakader          ###   ########.fr       */
+/*   Updated: 2025/01/17 22:01:50 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
-#include <string.h>
-#include <stdlib.h>
+#include "push_swap.h"
 
-void	ft_repeat(char **strs)
-{
-	int	i;
-
-	i = 0;
-	while (strs[i])
-	{
-		if (strs[i] == strs[i + 1])
-		{
-			write (1, "Error\n", 6);
-			exit(1);
-		}
-		i++;
-	}
-}
 
 void	ft_swap_strs(char **dest, char **src)
 {
@@ -40,15 +22,12 @@ void	ft_swap_strs(char **dest, char **src)
 	*dest = tmp;
 }
 
-int ft_strcmp(char *s1, char *s2)
-{
-	while (*s1 && (*s1 == *s2))
-	{
-		s1++;
-		s2++;
-	}
-	return (*(unsigned char *)s1 - *(unsigned char *)s2);
-}
+// int ft_strcmp(char *s1, char *s2)
+// {
+// 	if (*s1 == *s2)
+		
+// 	return (*(unsigned char *)s1 - *(unsigned char *)s2);
+// }
 
 
 void ft_bubble(char **strs)
@@ -61,7 +40,7 @@ void ft_bubble(char **strs)
 		current = strs;
 		while (*(current + 1))
 		{
-			if (ft_strcmp(*current, *(current + 1)) > 0)
+			if (*current - *(current + 1) > 0)
 			{
 				ft_swap_strs(current, current + 1);
 				swapped = 1;
