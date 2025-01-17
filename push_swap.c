@@ -6,12 +6,11 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 10:37:30 by hakader           #+#    #+#             */
-/*   Updated: 2025/01/16 15:40:10 by hakader          ###   ########.fr       */
+/*   Updated: 2025/01/17 21:37:34 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
 
 char	*join_args(char **av)
 {
@@ -50,6 +49,8 @@ int main (int ac, char **av)
 		write (1, "Error\n", 6);
 		return (0);
 	}
+	ft_bubble(av);
+	ft_repeat(av);
 	while (av[i])
 	{
 		printf("%s\n", av[i]);

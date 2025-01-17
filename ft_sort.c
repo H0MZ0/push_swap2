@@ -6,12 +6,30 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 16:14:07 by hakader           #+#    #+#             */
-/*   Updated: 2025/01/16 18:48:48 by hakader          ###   ########.fr       */
+/*   Updated: 2025/01/17 21:30:09 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <unistd.h>
 #include <string.h>
+#include <stdlib.h>
+
+void	ft_repeat(char **strs)
+{
+	int	i;
+
+	i = 0;
+	while (strs[i])
+	{
+		if (strs[i] == strs[i + 1])
+		{
+			write (1, "Error\n", 6);
+			exit(1);
+		}
+		i++;
+	}
+}
 
 void	ft_swap_strs(char **dest, char **src)
 {
@@ -22,43 +40,45 @@ void	ft_swap_strs(char **dest, char **src)
 	*dest = tmp;
 }
 
-int	*ft_strcmp(char *src, char *dest)
+int ft_strcmp(char *s1, char *s2)
 {
-
-	if (!src || !dest)
-		return (0);
-	if (src == dest)
-		return(0);
-	return (src - dest);
-}
-
-void	ft_bubble(char **strs)
-{
-	int		i;
-	int		j;
-
-	i = 0;
-	j = 1;
-	while (strs[i])
+	while (*s1 && (*s1 == *s2))
 	{
-		while (strs[j])
-		{
-			if (strcmp(strs[i], strs[j]) < 0)
-				ft_swap_strs (strs[i], strs[j]);
-			j++;
-		}
-		i++;
-		j = i + 1;
-		if (strs[j] == NULL)
-			break;
+		s1++;
+		s2++;
 	}
+	return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }
-int main()
+
+
+void ft_bubble(char **strs)
 {
-	char *src;
-	char *dest;
-	src = "hello";
-	dest = "world";
-	ft_swap_strs(&dest, &src);
-	printf ("%s\n%s",dest, src);
+	int i, swapped;
+	char **current;
+
+	do {
+		swapped = 0;
+		current = strs;
+		while (*(current + 1))
+		{
+			if (ft_strcmp(*current, *(current + 1)) > 0)
+			{
+				ft_swap_strs(current, current + 1);
+				swapped = 1;
+			}
+			current++;
+		}
+	} while (swapped);
 }
+
+// int main()
+// {
+//     char *strs[] = {"8", "5", "7", "3", NULL};
+//     ft_bubble(strs);
+// 	ft_repeat(strs);
+
+//     for (int i = 0; strs[i]; i++)
+//         printf("%s\n", strs[i]);
+
+//     return 0;
+// }
