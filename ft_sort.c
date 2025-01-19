@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 16:14:07 by hakader           #+#    #+#             */
-/*   Updated: 2025/01/17 22:01:50 by hakader          ###   ########.fr       */
+/*   Updated: 2025/01/18 15:24:48 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void ft_bubble(char **strs)
 		current = strs;
 		while (*(current + 1))
 		{
-			if (*current - *(current + 1) > 0)
+			if (strcmp(*current, *(current + 1)) > 0)
 			{
 				ft_swap_strs(current, current + 1);
 				swapped = 1;
@@ -50,13 +50,13 @@ void ft_bubble(char **strs)
 	} while (swapped);
 }
 
-// int main()
+// int main(int ac, char **strs)
 // {
-//     char *strs[] = {"8", "5", "7", "3", NULL};
+//     // char *strs[] = {"8", "22", "7", "3", NULL};
 //     ft_bubble(strs);
-// 	ft_repeat(strs);
+// 	// ft_repeat(strs);
 
-//     for (int i = 0; strs[i]; i++)
+//     for (int i = 1; strs[i]; i++)
 //         printf("%s\n", strs[i]);
 
 //     return 0;

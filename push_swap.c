@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 10:37:30 by hakader           #+#    #+#             */
-/*   Updated: 2025/01/17 22:01:08 by hakader          ###   ########.fr       */
+/*   Updated: 2025/01/18 14:52:43 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,12 +62,9 @@ int main (int ac, char **av)
 	arr = join_args(av);
 	av = ft_split(arr, ' ');
 	if(ft_isnum(av) == 0)
-	{
-		write (1, "Error\n", 6);
-		return (0);
-	}
+		return (write (1, "Error\n", 6), 0);
 	ft_bubble(av);
-	ft_repeat(av);
+	// ft_repeat(av);
 	while (av[i])
 	{
 		printf("%s\n", av[i]);
