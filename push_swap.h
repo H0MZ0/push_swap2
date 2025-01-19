@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 10:19:08 by hakader           #+#    #+#             */
-/*   Updated: 2025/01/17 21:50:51 by hakader          ###   ########.fr       */
+/*   Updated: 2025/01/19 15:36:32 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,7 @@ size_t	ft_strlen(const char *str);
 int     ft_isnum(char **av);
 void    ft_bubble(char **strs);
 void	ft_repeat(char **strs);
+int     ft_atoi(char *str);
+
 
 #endif

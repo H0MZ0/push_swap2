@@ -6,11 +6,38 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 10:35:24 by hakader           #+#    #+#             */
-/*   Updated: 2025/01/16 15:28:43 by hakader          ###   ########.fr       */
+/*   Updated: 2025/01/19 15:36:22 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+int	ft_atoi(char *str)
+{
+	int		i;
+	int		sign;
+	long	result;
+
+	i = 0;
+	sign = 1;
+	result = 0;
+	while (str[i] && ((str[i] == ' ') || (str[i] >= 9 && str[i] <= 13)))
+	{
+		i++;
+	}
+	if (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i] == '-')
+			sign *= -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		result = result * 10 + (str[i] - 48);
+		i++;
+	}
+	return (sign * result);
+}
 
 size_t	ft_strlen(const char *str)
 {
