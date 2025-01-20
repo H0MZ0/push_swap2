@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 10:37:30 by hakader           #+#    #+#             */
-/*   Updated: 2025/01/20 14:17:08 by hakader          ###   ########.fr       */
+/*   Updated: 2025/01/20 15:12:21 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,20 +102,21 @@ int main (int ac, char **av)
 	ft_repeat(&sorted, size);
 	if (check_spaces(sorted, size) == 0)
 	{
-		printf("hamza");
+		write (1, "Error\n", 6);
+		exit(1);
 	}
-	while (stack_a)
-	{
-		printf("%d\n",stack_a->content);
-		stack_a = stack_a->next;
-	}
+	// while (stack_a)
+	// {
+	// 	printf("%d\n",stack_a->content);
+	// 	stack_a = stack_a->next;
+	// }
 	// free(stack_a);
 	i = 0;
-	// while (size + 1)
-	// {
-	// 	printf("%d\n", sorted[i++]);
-	// 	size--;
-	// }
+	while (size + 1)
+	{
+		printf("%d\n", sorted[i++]);
+		size--;
+	}
 
 	free_arr(av);
 	return (0);
