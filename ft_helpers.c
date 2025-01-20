@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 16:30:54 by hakader           #+#    #+#             */
-/*   Updated: 2025/01/20 13:28:54 by hakader          ###   ########.fr       */
+/*   Updated: 2025/01/20 13:56:44 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ int	fill_stack(t_stack **stack, int ac, char **av)
 
 	while (ac > 0)
 	{
-		check = check_spaces(av[ac]);
+		// check = check_spaces(av[ac]);
 		if (check == -1)
 			return (0);
 		if (check == 1){
