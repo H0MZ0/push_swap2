@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 10:19:08 by hakader           #+#    #+#             */
-/*   Updated: 2025/01/20 14:12:50 by hakader          ###   ########.fr       */
+/*   Updated: 2025/01/20 15:41:42 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,7 @@ int stack_is_empty(t_stack *stack);
 int	push_stack(t_stack **stack, int data);
 int ft_check_reapate(t_stack *stack, int value);
 int check_spaces(int *av, int size);
+void ft_printstack(t_stack *stack);
+
 
 #endif
