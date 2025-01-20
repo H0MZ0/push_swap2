@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 10:39:28 by hakader           #+#    #+#             */
-/*   Updated: 2025/01/20 13:58:37 by hakader          ###   ########.fr       */
+/*   Updated: 2025/01/20 14:17:53 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,20 +45,14 @@ int stack_is_empty(t_stack *stack)
 	return (0);
 }
 
-int check_spaces(char *av)
+int check_spaces(int *av, int size)
 {
 	int i;
 
 	i = 0;
 	if (!av)
 		return (0);
-	while (av[i])
-	{
-		if (av[i] > 8 && av[i] < 14)
-			return (-1);
-		if (av[i] == 32)
-			return (1);
-		i ++;
-	}
+	while (av[i] == 32 && i < size)
+		i++;
 	return (0);
 }

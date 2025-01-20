@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 16:30:54 by hakader           #+#    #+#             */
-/*   Updated: 2025/01/20 13:56:44 by hakader          ###   ########.fr       */
+/*   Updated: 2025/01/20 14:10:56 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,33 +97,33 @@ void ft_rev_rotate_ab(t_stack **stack)
 	before_last->next = NULL;
 }
 
-int	fill_stack(t_stack **stack, int ac, char **av)
-{
-	ac -= 1;
-	int value;
-	int check;
+// int	fill_stack(t_stack **stack, int ac, char **av)
+// {
+// 	ac -= 1;
+// 	int value;
+// 	int check;
 
 
-	while (ac > 0)
-	{
-		// check = check_spaces(av[ac]);
-		if (check == -1)
-			return (0);
-		if (check == 1){
-			printf ("%s", "here");
-		}
-			// ft_split(av[ac], 32);
-		if (ft_isdigit(av[ac]) == 0)
-			return (0);
-		value = ft_atoi(av[ac]);
-		if (ft_check_reapate(*stack, value) == 0)
-			return (0);
-		if (push_stack(stack, value) == 0)
-			return (0);
-		ac--;
-	}
-	return (1);
-}
+// 	while (ac > 0)
+// 	{
+// 		// check = check_spaces(av[ac]);
+// 		if (check == -1)
+// 			return (0);
+// 		if (check == 1){
+// 			printf ("%s", "here");
+// 		}
+// 			// ft_split(av[ac], 32);
+// 		if (ft_isdigit(av[ac]) == 0)
+// 			return (0);
+// 		value = ft_atoi(av[ac]);
+// 		if (ft_check_reapate(*stack, value) == 0)
+// 			return (0);
+// 		if (push_stack(stack, value) == 0)
+// 			return (0);
+// 		ac--;
+// 	}
+// 	return (1);
+// }
 
 void ft_printstack(t_stack *stack)
 {
