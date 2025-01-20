@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 10:37:30 by hakader           #+#    #+#             */
-/*   Updated: 2025/01/20 15:12:21 by hakader          ###   ########.fr       */
+/*   Updated: 2025/01/20 15:33:07 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,11 +100,11 @@ int main (int ac, char **av)
 	size = strtoint(av, &sorted);
 	ft_bubble(sorted, size);
 	ft_repeat(&sorted, size);
-	if (check_spaces(sorted, size) == 0)
-	{
-		write (1, "Error\n", 6);
-		exit(1);
-	}
+	// if (check_spaces(sorted, size) == 0)
+	// {
+	// 	write (1, "Error\n", 6);
+	// 	exit(1);
+	// }
 	// while (stack_a)
 	// {
 	// 	printf("%d\n",stack_a->content);

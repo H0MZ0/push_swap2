@@ -6,30 +6,30 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 10:39:28 by hakader           #+#    #+#             */
-/*   Updated: 2025/01/20 15:23:16 by hakader          ###   ########.fr       */
+/*   Updated: 2025/01/20 15:31:50 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_error(t_stack *list, char *str, int *numbers)
-{
-	int	i;
+// void	ft_error(t_stack *list, char **str, int **numbers, int size)
+// {
+// 	int	i;
 
-	i = 0;
-	while(!(list->content))
-	{
-		free(list->content);
-		list = list->next;
-	}
-	while (str[i])
-		free (str[i++]);
-	i = 0;
-	while (numbers[i])
-		free(numbers[i++]);
-	write (1, "Error\n", 6);
-	exit(1);
-}
+// 	i = 0;
+// 	while(!(list->content))
+// 	{
+// 		free(list->content);
+// 		list = list->next;
+// 	}
+// 	while (str[i])
+// 		free (str[i++]);
+// 	i = 0;
+// 	while (size > 0)
+// 		free(numbers[size--]);
+// 	write (1, "Error\n", 6);
+// 	exit(1);
+// }
 
 int ft_check_reapate(t_stack *stack, int value)
 {
