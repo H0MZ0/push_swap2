@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 16:30:54 by hakader           #+#    #+#             */
-/*   Updated: 2025/01/20 10:33:15 by hakader          ###   ########.fr       */
+/*   Updated: 2025/01/20 13:28:54 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,4 +132,3 @@ void ft_printstack(t_stack *stack)
 	printf("%d\n", stack->content);
 	ft_printstack(stack->next);
 }
-

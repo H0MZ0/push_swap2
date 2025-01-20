@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 10:35:24 by hakader           #+#    #+#             */
-/*   Updated: 2025/01/20 12:26:53 by hakader          ###   ########.fr       */
+/*   Updated: 2025/01/20 13:47:36 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 int	ft_atoi(char *str)
 {
-	int		i;
-	int		sign;
+	int		i, sign;
 	long	result;
 
 	i = 0;
@@ -32,10 +31,12 @@ int	ft_atoi(char *str)
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
-	{
-		result = result * 10 + (str[i] - 48);
-		i++;
-	}
+		result = result * 10 + (str[i++] - 48);
+    if ((sign * result) > 2147483647 || (sign * result) < -2147483648)
+    {
+        write(1, "Error\n", 6);
+        exit(1);
+    }
 	return (sign * result);
 }
 
