@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 10:19:08 by hakader           #+#    #+#             */
-/*   Updated: 2025/01/19 15:36:32 by hakader          ###   ########.fr       */
+/*   Updated: 2025/01/20 12:18:26 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,20 @@ typedef struct list
 {
     int content;
     struct list *next;
-} t_list;
-
+} t_stack;
 
 char    *ft_strjoin(char *s1, char *s2);
 char	**ft_split(char const *s, char c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 size_t	ft_strlen(const char *str);
 int     ft_isnum(char **av);
-void    ft_bubble(char **strs);
-void	ft_repeat(char **strs);
+void    ft_bubble(int *strs, int size);
+void	ft_repeat(int **strs, int size);
 int     ft_atoi(char *str);
-
+int	ft_isdigit(char *c);
+int stack_is_empty(t_stack *stack);
+int	push_stack(t_stack **stack, int data);
+int ft_check_reapate(t_stack *stack, int value);
+int check_spaces(char *av);
 
 #endif

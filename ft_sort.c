@@ -6,40 +6,57 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 16:14:07 by hakader           #+#    #+#             */
-/*   Updated: 2025/01/19 15:15:16 by hakader          ###   ########.fr       */
+/*   Updated: 2025/01/20 12:11:12 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+// int	ft_strcmp(char *str, char *src)
+// {
+// 	int i;
 
-void	ft_swap_strs(char **dest, char **src)
+// 	i = 0;
+// 	if (!str || !src)
+// 		return (0);
+// 	while (str[i] && src[i])
+// 	{
+// 		if (str[i] != src[i])
+// 			return (str[i] - src[i]);
+// 		i++;
+// 	}
+// 	return (str[i] - src[i]);
+// }
+
+// void	ft_swap_strs(int dest, int src)
+// {
+// 	int	tmp;
+
+// 	tmp = src;
+// 	src = dest;
+// 	dest = tmp;
+// }
+
+void ft_bubble(int *strs, int size)
 {
-	char	*tmp;
+	int	i, j, swapped;
 
-	tmp = *src;
-	*src = *dest;
-	*dest = tmp;
-}
-
-void ft_bubble(char **strs)
-{
-	int i, swapped;
-	char **current;
-
-	do {
-		swapped = 0;
-		current = strs;
-		while (*(current + 1))
+	i = 1;
+	while (i <= size)
+	{
+		j = i - 1;
+		swapped = strs[i];
+		while (j >= 0)
 		{
-			if (strcmp(*current, *(current + 1)) > 0)
+			if (strs[j] > swapped)
 			{
-				ft_swap_strs(current, current + 1);
-				swapped = 1;
+				strs[j + 1] = strs[j];
+				strs[j] = swapped;
 			}
-			current++;
+			j--;
 		}
-	} while (swapped);
+		i++;
+	}
 }
 
 // int main(int ac, char **strs)
