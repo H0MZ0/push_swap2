@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 10:37:30 by hakader           #+#    #+#             */
-/*   Updated: 2025/01/20 12:24:23 by hakader          ###   ########.fr       */
+/*   Updated: 2025/01/20 12:24:45 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,13 @@ int main (int ac, char **av)
 	// 	printf("%d ->",stack_a->content);
 	// 	stack_a = stack_a->next;
 	// }
+	i = 0;
+	while (size+1)
+	{
+		printf("%d\n", sorted[i++]);
+		size--;
+	}
+
 	free_arr(av);
 	i = 0;
 	return (0);
