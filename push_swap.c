@@ -6,7 +6,7 @@
 /*   By: hakader <hakader@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 10:37:30 by hakader           #+#    #+#             */
-/*   Updated: 2025/01/20 13:29:19 by hakader          ###   ########.fr       */
+/*   Updated: 2025/01/20 13:51:52 by hakader          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,7 @@ int main (int ac, char **av)
 	size = strtoint(av, &sorted);
 	ft_bubble(sorted, size);
 	ft_repeat(&sorted, size);
+	
 	while (stack_a)
 	{
 		printf("%d\n",stack_a->content);
